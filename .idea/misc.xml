@@ -3,13 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/ic_notifications_black_24dp.xml" value="0.1705" />
         <entry key="app/src/main/res/layout-w1240dp/activity_login_form.xml" value="0.25" />
         <entry key="app/src/main/res/layout-w936dp/activity_login_form.xml" value="0.17109375" />
         <entry key="app/src/main/res/layout/activity_broadcastreciever.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/activity_calculator.xml" value="0.2241897583007813" />
         <entry key="app/src/main/res/layout/activity_check_box.xml" value="0.17380218505859377" />
+        <entry key="app/src/main/res/layout/activity_dbexample.xml" value="0.16394927536231885" />
+        <entry key="app/src/main/res/layout/activity_list_data.xml" value="0.16394927536231885" />
         <entry key="app/src/main/res/layout/activity_login_form.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2006340579710145" />
+        <entry key="app/src/main/res/layout/activity_notification.xml" value="0.2314239501953125" />
         <entry key="app/src/main/res/layout/activity_progress_bar.xml" value="0.1800460815429688" />
         <entry key="app/src/main/res/layout/activity_simple_browser.xml" value="0.26268272952757016" />
         <entry key="app/src/main/res/layout/activity_tabs.xml" value="0.24010416666666667" />

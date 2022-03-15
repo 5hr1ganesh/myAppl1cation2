@@ -27,9 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         addListenerOnButtonClick();
 
-        }
-
-
+    }
 
 
     private void addListenerOnButtonClick() {
@@ -88,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item8:
                 Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, TabsActivity.class));
+                return true;
+            case R.id.item9:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, NotificationActivity.class));
+                return true;
+            case R.id.item10:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, DBExampleActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

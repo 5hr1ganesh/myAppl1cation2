@@ -33,7 +33,11 @@
         app:showAsAction="withText" />
     <item
         android:id="@+id/item9"
-        android:title="9"
+        android:title="Notification"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/item10"
+        android:title="Database"
         app:showAsAction="withText" />
 
 </menu>
