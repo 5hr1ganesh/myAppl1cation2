@@ -95,6 +95,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, DBExampleActivity.class));
                 return true;
+            case R.id.item11:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, MediaPlayerActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

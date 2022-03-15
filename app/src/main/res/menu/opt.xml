@@ -39,5 +39,9 @@
         android:id="@+id/item10"
         android:title="Database"
         app:showAsAction="withText" />
+    <item
+        android:id="@+id/item11"
+        android:title="Media Player"
+        app:showAsAction="withText" />
 
 </menu>
