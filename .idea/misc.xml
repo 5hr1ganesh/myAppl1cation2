@@ -7,12 +7,17 @@
         <entry key="app/src/main/res/layout-w936dp/activity_login_form.xml" value="0.17109375" />
         <entry key="app/src/main/res/layout/activity_broadcastreciever.xml" value="0.17255434782608695" />
         <entry key="app/src/main/res/layout/activity_calculator.xml" value="0.2241897583007813" />
-        <entry key="app/src/main/res/layout/activity_check_box.xml" value="0.17255434782608695" />
+        <entry key="app/src/main/res/layout/activity_check_box.xml" value="0.17380218505859377" />
         <entry key="app/src/main/res/layout/activity_login_form.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2006340579710145" />
         <entry key="app/src/main/res/layout/activity_progress_bar.xml" value="0.1800460815429688" />
+        <entry key="app/src/main/res/layout/activity_simple_browser.xml" value="0.26268272952757016" />
+        <entry key="app/src/main/res/layout/activity_tabs.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/activity_timepicker.xml" value="0.15443840579710144" />
+        <entry key="app/src/main/res/layout/fragment_first.xml" value="0.24010416666666667" />
+        <entry key="app/src/main/res/layout/fragment_fullscreen.xml" value="0.24010416666666667" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.40311482747395844" />
+        <entry key="app/src/main/res/layout/fragment_tabs.xml" value="0.2515625" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.228125" />
         <entry key="app/src/main/res/menu/opt.xml" value="0.24010416666666667" />
       </map>

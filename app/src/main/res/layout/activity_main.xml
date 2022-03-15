@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center" android:background="@color/black"
+    android:layout_gravity="center"
+    android:background="@color/verydarkgrey"
 
     tools:context=".MainActivity">
 
@@ -15,9 +16,9 @@
         android:text="button1"
         android:textOff="Off"
         android:textOn="On"
+        app:layout_constraintBottom_toTopOf="@id/button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/button"
         app:layout_constraintTop_toBottomOf="@+id/toggleButton1" />
 
     <ToggleButton
@@ -35,9 +36,10 @@
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:backgroundTint="@color/Orange"
         android:layout_marginTop="25dp"
+        android:backgroundTint="@color/Orange"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/toggleButton2" />
 

@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 StringBuilder result = new StringBuilder();
                 result.append("ToggleButton1:").append(toggleButton1.getText());
                 result.append("\nToggleButton2:").append((toggleButton2.getText()));
-                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), result.toString(), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -80,6 +80,14 @@ public class MainActivity extends AppCompatActivity {
             case R.id.item6:
                 Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, ProgressBarActivity.class));
+                return true;
+            case R.id.item7:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, sImpleBrowser.class));
+                return true;
+            case R.id.item8:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, TabsActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

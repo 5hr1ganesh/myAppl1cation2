@@ -25,7 +25,15 @@
         app:showAsAction="withText" />
     <item
         android:id="@+id/item7"
-        android:title="Item 7"
+        android:title="Internet"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/item8"
+        android:title="Tabs"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/item9"
+        android:title="9"
         app:showAsAction="withText" />
 
 </menu>
