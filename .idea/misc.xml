@@ -11,8 +11,10 @@
         <entry key="app/src/main/res/layout/activity_login_form.xml" value="0.228125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2006340579710145" />
         <entry key="app/src/main/res/layout/activity_progress_bar.xml" value="0.1800460815429688" />
+        <entry key="app/src/main/res/layout/activity_timepicker.xml" value="0.15443840579710144" />
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.40311482747395844" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.228125" />
+        <entry key="app/src/main/res/menu/opt.xml" value="0.24010416666666667" />
       </map>
     </option>
   </component>
