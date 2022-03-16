@@ -89,8 +89,9 @@
                 android:textSize="35sp"
                 android:text="/"/>
             <Button
+                android:id="@+id/btnmod"
                 android:layout_width="0dp"
-                android:onClick="powerOnClick"
+                android:onClick="modOnClick"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:layout_marginStart="5dp"
@@ -98,7 +99,7 @@
                 android:background="@android:color/transparent"
                 android:textColor="@color/Orange"
                 android:textSize="35sp"
-                android:text="^"/>
+                android:text="%"/>
 
         </LinearLayout>
 

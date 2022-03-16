@@ -2,6 +2,7 @@ package com.dharamveer.mytogglebutton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,6 +16,7 @@ import javax.script.ScriptException;
 public class CalculatorActivity extends AppCompatActivity {
 
 
+    private static final String TAG = "CalculatorActivity";
     TextView textCalculatetv;
     TextView textResulttv;
     String woRkings="";
@@ -63,8 +65,8 @@ public class CalculatorActivity extends AppCompatActivity {
         setWoRkings("/");
     }
 
-    public void powerOnClick(View view) {
-        setWoRkings("^");
+    public void modOnClick(View view) {
+        setWoRkings("%");
     }
 
     public void seVen(View view) {
@@ -129,12 +131,30 @@ public class CalculatorActivity extends AppCompatActivity {
 
     public void eqUal(View view) {
         Double result = null;
-        ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
-        checkForPowerOf();
-        try {
-            result = (double)engine.eval(fOrmula);
-        } catch (ScriptException e) {
-            Toast.makeText(this, "Invalid Input", Toast.LENGTH_SHORT).show();
+        if (woRkings.contains("%")) {
+            double val1;
+            double val2;
+
+            String[] data = woRkings.split("%");
+            val1 = Double.parseDouble(data[0]);
+            if (data.length > 1) {
+                val2 = Double.parseDouble(data[1]);
+                Log.e(TAG, "eqUal: " + val1 + val2);
+                result = val1 % val2;
+            } else {
+                result = val1 / 100;
+            }
+
+
+        } else {
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName("rhino");
+//            checkForPowerOf();
+            try {
+                result = (double) engine.eval(woRkings);
+                Toast.makeText(this, "Result = " + result, Toast.LENGTH_SHORT).show();
+            } catch (ScriptException e) {
+                Toast.makeText(this, "Invalid Input", Toast.LENGTH_SHORT).show();
+            }
         }
         if (result != null)
             textResulttv.setText(String.valueOf(result.doubleValue()));
@@ -144,8 +164,9 @@ public class CalculatorActivity extends AppCompatActivity {
         ArrayList<Integer> indexOfPowers = new ArrayList();
         for (int i = 0; i < woRkings.length(); i++)
         {
-            if(woRkings.charAt(i) == '^')
+            if(woRkings.charAt(i) == '%') {
                 indexOfPowers.add(i);
+            }
         }
         fOrmula = woRkings;
         tempFormula = woRkings;
@@ -154,6 +175,7 @@ public class CalculatorActivity extends AppCompatActivity {
             changeFormula(index);
         }
         fOrmula = tempFormula;
+        Toast.makeText(this, "Formula = " + fOrmula, Toast.LENGTH_SHORT).show();
     }
 
     private void changeFormula(Integer index)
@@ -161,24 +183,38 @@ public class CalculatorActivity extends AppCompatActivity {
         String numberLeft = "";
         String numberRight = "";
 
-        for (int i = index + 1; i< woRkings.length(); i++)
+        Log.e(TAG, "changeFormula: right" + numberLeft);
+        for (int i = index + 1; i < woRkings.length(); i++)
         {
-            if (isNumeric(woRkings.charAt(i)))
+            Log.e(TAG, "changeFormula: right" + numberLeft);
+            if (isNumeric(woRkings.charAt(i))) {
                 numberRight = numberRight + woRkings.charAt(i);
-            else
-                break;;
+                Log.e(TAG, "changeFormula: right" + numberLeft);
+            } else {
+                break;
+            }
         }
-        for (int i = index - 1; i>= 0; i--)
+        Log.e(TAG, "changeFormula: " + numberLeft);
+        for (int i = 0; i<= index - 1; i++)
         {
-            if (isNumeric(woRkings.charAt(i)))
+            Log.e(TAG, "changeFormula: " + numberLeft);
+            if (isNumeric(woRkings.charAt(i))) {
+                Log.e(TAG, "changeFormula: " + numberLeft);
                 numberLeft = numberLeft + woRkings.charAt(i);
-            else
-                break;;
+            }
+            else {
+                break;
+            }
         }
+        Log.e(TAG, "changeFormula: " + numberLeft);
 
-        String original = numberLeft + "^" + numberRight;
-        String changed = "Math.pow("+numberLeft+","+numberRight+")";
-        tempFormula = tempFormula.replace(original, changed);
+        String changed = "";
+        if (numberRight.isEmpty()) {
+            changed = numberLeft+"/100";
+        } else {
+            changed = numberLeft+"%"+numberRight;
+        }
+        tempFormula = changed;
 
     }
 
