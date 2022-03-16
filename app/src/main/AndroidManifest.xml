@@ -11,6 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".HelloActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AnimalsInfo"
+            android:exported="false" />
+        <activity
             android:name=".MediaPlayerActivity"
             android:exported="false" />
         <activity

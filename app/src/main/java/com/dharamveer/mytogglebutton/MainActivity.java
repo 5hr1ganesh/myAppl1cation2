@@ -99,6 +99,14 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(this, MediaPlayerActivity.class));
                 return true;
+            case R.id.item12:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, AnimalsInfo.class));
+                return true;
+            case R.id.item13:
+                Toast.makeText(this, item.getTitle(), Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, HelloActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

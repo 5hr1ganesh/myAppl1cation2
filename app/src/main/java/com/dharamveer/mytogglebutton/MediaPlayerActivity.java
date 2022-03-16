@@ -20,7 +20,7 @@ public class MediaPlayerActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         try {
-            mp = MediaPlayer.create(this, R.raw.kalimba);
+            mp = MediaPlayer.create(this, R.raw.shriram_ashtakam);
             mp.setScreenOnWhilePlaying(true);
         } catch (Exception e) {
             System.out.println(e.toString());

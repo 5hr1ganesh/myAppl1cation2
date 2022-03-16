@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MediaPlayerActivity">
+    tools:context=".MediaPlayerActivity"
+    android:background="@color/verydarkgrey">
 
     <ImageView
         android:id="@+id/imageView"
@@ -12,12 +13,11 @@
         android:layout_height="255dp"
         android:layout_margin="45dp"
         android:layout_marginBottom="82dp"
-        android:scaleType="centerCrop"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/shriram" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab"
