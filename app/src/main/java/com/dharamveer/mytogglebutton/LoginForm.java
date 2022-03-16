@@ -1,5 +1,6 @@
 package com.dharamveer.mytogglebutton;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.Toast;
@@ -36,7 +37,11 @@ public class LoginForm extends AppCompatActivity {
                 txtUsername.setError(null);
                 txtPassword.setError(null);
                 Toast.makeText(this, "Login Successful!!!", Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(this, HelloActivity.class);
+                i.putExtra("username", txtUsername.getEditText().getText().toString());
+                startActivity(i);
             }
+
         });
 
     }

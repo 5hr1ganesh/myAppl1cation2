@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Togglebutton</string>
+    <string name="app_name">Android Practical</string>
     <string name="title_activity_login_form">LoginForm</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
